@@ -76,12 +76,12 @@
         function geo_success(position) {
 			gLat = position.coords.latitude;
 			gLon = position.coords.longitude;
-			
+			alert(gLat+"---------------"+gLon);
 			// Is the compass from magnetic north or true north
 			// adjust for magnetic north.
 			north = distance(81.3, -110.8, gLat,gLon);
 			north = parseFloat(north[1])
-			alert("hi");
+			//alert("hi");
 			
 			$('.geo').each(function(){
 				tLat = $(this).find('.lat').html()
@@ -94,7 +94,7 @@
 				$(this).find('.angle').html(a);
 				
 				$(this).attr('data-arc',a);
-				alert(a);
+				//alert(a);
 			})
 
 
